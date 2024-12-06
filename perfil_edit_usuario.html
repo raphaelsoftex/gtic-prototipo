@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário - Softex</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141625;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #4B33A1;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .container {
+            padding: 30px;
+            width: 100%;
+            max-width: 1000px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .profile-card {
+            background-color: #1C1E36;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #4B33A1;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-info h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .profile-actions a {
+            background-color: #4B33A1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .profile-actions a:hover {
+            background-color: #ff9800;
+        }
+
+        .activity-section {
+            background-color: #1C1E36;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #4B33A1;
+        }
+
+        .activity-section h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .activity-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #4B33A1;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #4B33A1;
+            padding: 3px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Perfil do Usuário Externo</h1>
+</header>
+
+<div class="container">
+
+    <!-- Cartão do perfil do usuário -->
+    <div class="profile-card">
+        <!-- Foto do perfil (estática ou carregada dinamicamente) -->
+        <img src="https://via.placeholder.com/120" alt="Foto do perfil do usuário">
+
+        <!-- Informações do perfil -->
+        <div class="profile-info">
+            <h2>[Nome do Usuário Externo]</h2>
+            <p><strong>Instituição:</strong> Empresa ou Instituição Exemplo</p>
+            <p><strong>Email:</strong> usuarioexterno@exemplo.com</p>
+            <p><strong>Status:</strong> Ativo</p>
+            <p><strong>Perfil:</strong> Coordenador</p>
+
+            <!-- Ações do perfil -->
+            <div class="profile-actions">
+                <a href="#">Editar Perfil</a>
+                <a href="#">Alterar Senha</a>
+                <a href="#">Visualizar Atividades</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Editar Perfil</h2>
+
+    <!-- Seção derdição de perfil-->
+    <div class="activity-section">
+            <ul class="activity-list"><div class="input-group">
+                <label for="email">Nome</label>
+                <input type="email" id="email" placeholder="">
+                    <a>Alterar Nome</a>
+                </div>
+                <p></p>
+                <div class="input-group">
+                    <label for="email">E-mail </label>
+                    <input type="email" id="email" placeholder="">
+                        <a>Alterar E-mail</a>
+                    </div>
+                <p></p>
+                 <div class="input-group">
+                    <label for="email">Telefone</label>
+                    <input type="email" id="email" placeholder="">
+                         <a>Alterar Telefone</a>
+                    </div>
+            </div>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Softex - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

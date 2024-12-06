@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento ao Cliente - Portal Softex</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1A1E36;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4B33A1;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+        .help-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .help-item {
+            width: 150px;
+            height: 150px;
+            background-color: #292C4B;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .help-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .help-item img {
+            width: 70px;
+            height: 70px;
+        }
+        .help-item p {
+            margin-top: 10px;
+            color: #f1f1f1;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #4B33A1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Atendimento ao Cliente - Portal Softex</h1>
+</header>
+
+<div class="container">
+    <h2>Como podemos te ajudar?</h2>
+    
+    <div class="help-container">
+        <!-- FAQ -->
+        <div class="help-item">
+            <a href="#faq">
+                <img src="https://img.icons8.com/dusk/64/question.png" alt="FAQ">
+                <p>FAQ</p>
+            </a>
+        </div>
+
+        <!-- Dúvidas Técnicas -->
+        <div class="help-item">
+            <a href="#duvidas-tecnicas">
+                <img src="https://img.icons8.com/dusk/64/doc.png" alt="Dúvidas Técnicas">
+                <p>Duvidas Técnico/Financeiro</p>
+            </a>
+        </div>
+
+        <!-- Jurídico -->
+        <div class="help-item">
+            <a href="#juridico">
+                <img src="https://img.icons8.com/dusk/64/law.png" alt="Jurídico">
+                <p>Jurídico</p>
+            </a>
+        </div>
+
+        <!-- Aditivos e PU -->
+        <div class="help-item">
+            <a href="#aditivos-pu">
+                <img src="https://img.icons8.com/dusk/64/agreement.png" alt="Aditivos e PU">
+                <p>Aditivos & PU</p>
+            </a>
+        </div>
+
+        <!-- Histórico de Solicitações -->
+        <div class="help-item">
+            <a href="#historico">
+                <img src="https://icones.pro/wp-content/uploads/2022/03/historique-icone-de-l-historique-bleu.png" alt="Histórico de Solicitações">
+                <p>Histórico</p>
+            </a>
+        </div>
+
+        <!-- Solicitar Reunião -->
+        <div class="help-item">
+            <a href="#solicitar-reuniao">
+                <img src="https://img.icons8.com/dusk/64/calendar.png" alt="Solicitar Reunião">
+                <p>Agendar Reunião</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Softex - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>

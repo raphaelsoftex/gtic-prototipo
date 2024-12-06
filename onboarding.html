@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - Softex</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141625;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #4B33A1;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .container {
+            padding: 30px;
+            width: 100%;
+            max-width: 1000px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .quiz-container {
+            background-color: #1C1E36;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #4B33A1;
+            text-align: left;
+        }
+
+        .quiz-container h2 {
+            margin-bottom: 15px;
+        }
+
+        .quiz-container label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .btn-submit {
+            background-color: #4B33A1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .btn-submit:hover {
+            background-color: #6A5B9A;
+        }
+
+        footer {
+            background-color: #4B33A1;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Onboarding - Softex</h1>
+</header>
+
+<div class="container">
+
+    <!-- Seção do Vídeo -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID?controls=0&start=0" 
+                frameborder="0" 
+                allowfullscreen 
+                allow="autoplay; encrypted-media"></iframe>
+    </div>
+
+    <!-- Seção do Quiz -->
+    <div class="quiz-container">
+        <h2>Quiz: Avaliação do Onboarding</h2>
+        
+        <form id="quizForm">
+            <label>
+                <input type="radio" name="question1" value="a" required>
+                Pergunta 1: O que é o projeto? 
+                <span>(a) Uma iniciativa para melhorar processos (b) Um evento social (c) Um projeto de arte</span>
+            </label>
+            
+            <label>
+                <input type="radio" name="question2" value="b" required>
+                Pergunta 2: Quem é o responsável pelo projeto? 
+                <span>(a) A equipe de TI (b) O gerente de projetos (c) Todos os envolvidos</span>
+            </label>
+            
+            <label>
+                <input type="radio" name="question3" value="c" required>
+                Pergunta 3: Qual é a duração do projeto? 
+                <span>(a) 6 meses (b) 1 ano (c) Depende do escopo</span>
+            </label>
+            
+            <button type="submit" class="btn-submit">Enviar Respostas</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Softex - Todos os direitos reservados</p>
+</footer>
+
+<script>
+    // Adiciona um evento de envio ao formulário do quiz
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Aqui você pode adicionar lógica para processar as respostas
+        alert("Obrigado por completar o quiz! Você pode prosseguir para a próxima fase.");
+        // Redirecionar para a próxima fase, se necessário
+        
+    });
+</script>
+<p></p>
+<p></p>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Observatório de Dados Softex</title>
+    <style>
+        /* Paleta de Cores */
+        :root {
+            --primary-color: #4B33A1;
+            --background-color: #141625;
+            --text-color: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            background-color: #1c1e2b;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .left, .right {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .left {
+            background-color: var(--primary-color);
+        }
+
+        .right {
+            background-color: var(--background-color);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-size: 16px;
+            color: var(--text-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #1f2235;
+            color: var(--text-color);
+        }
+
+        .input-group a {
+            color: var(--primary-color);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #5a42c1;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: var(--text-color);
+            font-size: 20px;
+        }
+
+        /* Logo na parte superior */
+        .header-logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .header-logo img {
+            width: 150px;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="header-logo">
+        <img src="C:\Users\Carlos Rodrigues\Downloads/logo.png" alt="Logo Softex">
+    </div>
+
+    <div class="container">
+        <!-- Parte 1: Acesso ao Portal -->
+        <div class="left">
+            <h1>Acesso ao Portal</h1>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha">
+            </div>
+            <div class="input-group">
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+            <button class="btn" onclick="login()">Entrar</button>
+        </div>
+        
+        <!-- Parte 2: Acesso pela Primeira Vez -->
+        <div class="right">
+            <h1>Primeiro Acesso</h1>
+            <p class="info-text">Bem-vindo! Para começar a usar nossa plataforma, você será redirecionado para a página de cadastro.</p>
+            <button class="btn" onclick="redirectToPage('cadastro')">Iniciar Cadastro</button>
+            <div class="info-text">
+                <p>É rápido e fácil! Basta preencher as informações solicitadas para ter acesso.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        © 2024 Softex - Todos os direitos reservados
+    </footer>
+
+</body>
+</html>

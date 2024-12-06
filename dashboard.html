@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard - Observatório de Dados Softex</title>
+    <style>
+        /* Paleta de Cores */
+        :root {
+            --primary-color: #4B33A1;
+            --background-color: #141625;
+            --text-color: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: #4B33A1;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header nav a {
+            color: #f1f1f1;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+         /* Estilo das opções de execução */
+         .execution-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Divisão em duas colunas */
+            gap: 20px;
+        }
+
+        .execution-option {
+            background-color: #1f2235;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .execution-option:hover {
+            background-color: #4B33A1;
+        }
+
+        .execution-option a {
+            color: #f1f1f1;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Filtro */
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filter-section select {
+            padding: 10px;
+            font-size: 16px;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        /* Gráficos */
+        .charts {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .chart-container {
+            width: 48%;
+            background-color: #1f2235;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .chart-container canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Situações PC's */
+        .pc-status {
+            margin-bottom: 30px;
+            background-color: #1f2235;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .pc-status h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .pc-status ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .pc-status li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Kanban */
+        .kanban {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .kanban-column {
+            width: 19%;
+            background-color: #1f2235;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .kanban-column h3 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .kanban-item {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+.email-history ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.email-history li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #2A2E50;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #4B33A1;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+    </style>
+
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Dashboard - Observatório de Dados Softex</h1>
+        <nav>
+            <P></P>
+            <a href="#">Wiki</a> | 
+            <a href="#">Ajuda</a> | 
+            <a href="#">Perfil</a>|
+            <a href="#">Sair</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- Opções de Execução -->
+        <div class="execution-options">
+            <div class="execution-option">
+                <a href="#">Análise da Proposta</a>
+            </div>
+            <div class="execution-option">
+                <a href="#">Termo de Parceria</a>
+            </div>
+            <div class="execution-option">
+                <a href="#">Envio de Documentos</a>
+            </div>
+            <div class="execution-option">
+                <a href="#">Prestação de Contas</a>
+            </div>
+            <div class="execution-option">
+                <a href="#">Análise da Conformidade</a>
+            </div>
+            <div class="execution-option">
+                <a href="#">Encerramento do Projeto</a>
+            </div>
+            <div class="execution-option">
+                <a href="#">Execução do Projeto</a>
+            </div>
+            <div class="execution-option">
+                <a href="#"></a>
+            </div>
+        </div>
+
+
+    <div class="container">
+
+        <!-- Filtro de Projetos -->
+        <div class="filter-section">
+            <label for="project-select">Selecionar Projeto:</label>
+            <select id="project-select">
+                <option value="project1">Projeto 1</option>
+                <option value="project2">Projeto 2</option>
+                <option value="project3">Projeto 3</option>
+            </select>
+        </div>
+
+        <!-- Kanban -->
+        <h2>Fases dos Projetos</h2>
+        <p></p>
+        <div class="kanban">
+            
+            <div class="kanban-column">
+                <h3>Em Análise</h3>
+                <div class="kanban-item">Projeto A</div>
+            </div>
+            
+            <div class="kanban-column">
+                <h3>Em Execução</h3>
+                <div class="kanban-item">Projeto B</div>
+            </div>
+            <div class="kanban-column">
+                <h3>Pendências</h3>
+                <div class="kanban-item">Projeto C</div>
+            </div>
+            <div class="kanban-column">
+                <h3>Finalizados</h3>
+                <div class="kanban-item">Projeto D</div>
+            </div>
+            <div class="kanban-column">
+                <h3>Arquivados</h3>
+                <div class="kanban-item">Projeto E</div>
+            </div>
+        </div>
+
+        <p></p>
+
+        <!-- Gráficos Financeiros -->
+        <div class="charts">
+            <div class="chart-container">
+                <h2>Informações Financeiras</h2>
+                <canvas id="financialChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Status dos Projetos</h2>
+                <canvas id="statusChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Repasses Mensais</h2>
+                <canvas id="repassesChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h2>Distribuição dos Projetos por Fase</h2>
+                <canvas id="faseChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Situações da Prestação de Contas (PC's) -->
+        <div class="pc-status">
+            <h2>Situações das PC's</h2>
+            <ul>
+                <li><strong>Em Execução:</strong> Projeto A</li>
+                <li><strong>Em Análise:</strong> Projeto B</li>
+                <li><strong>Com a Executora:</strong> Projeto C</li>
+                <li><strong>Em Atraso:</strong> Projeto D</li>
+            </ul>
+        </div>
+
+        <!-- Interações de Troca de E-mails -->
+    <div class="box email-history">
+        <h2>Interações de Troca de E-mails</h2>
+        <ul>
+            <li><strong>E-mail #1:</strong> Enviado em 10/09/2024 - Assunto: Solicitação de ajuste no projeto</li>
+            <li><strong>E-mail #2:</strong> Enviado em 12/09/2024 - Assunto: Atualização sobre a conformidade do projeto</li>
+            <li><strong>E-mail #3:</strong> Enviado em 14/09/2024 - Assunto: Solicitação de documentos adicionais</li>
+        </ul>
+    </div>
+
+    </div>
+
+    <script>
+        // Gráfico de Informações Financeiras
+        const financialCtx = document.getElementById('financialChart').getContext('2d');
+        const financialChart = new Chart(financialCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Valor do Projeto', 'Total Captado', 'Total a Captar'],
+                datasets: [{
+                    label: 'R$ (Milhões)',
+                    data: [5, 3, 2],
+                    backgroundColor: [
+                        '#4B33A1',
+                        '#1F2235',
+                        '#5A42C1'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Status dos Projetos
+        const statusCtx = document.getElementById('statusChart').getContext('2d');
+        const statusChart = new Chart(statusCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Iniciar', 'Em Execução', 'Finalizado', 'Pendente'],
+                datasets: [{
+                    data: [10, 5, 3, 2],
+                    backgroundColor: [
+                        '#4B33A1',
+                        '#5A42C1',
+                        '#1F2235',
+                        '#999'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+         // Gráfico de Repasses Mensais
+         const repassesCtx = document.getElementById('repassesChart').getContext('2d');
+        const repassesChart = new Chart(repassesCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                datasets: [{
+                    label: 'R$ Repasses Mensais',
+                    data: [30000, 35000, 32000, 40000, 45000, 30000, 50000, 48000, 47000, 49000, 51000, 53000],
+                    backgroundColor: '#4B33A1',
+                    borderColor: '#4B33A1',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Gráfico de Distribuição dos Projetos por Fase
+        const faseCtx = document.getElementById('faseChart').getContext('2d');
+        const faseChart = new Chart(faseCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Em Análise', 'Em Execução', 'Pendências', 'Finalizados', 'Arquivados'],
+                datasets: [{
+                    data: [3, 5, 2, 4, 1],
+                    backgroundColor: [
+                        '#4B33A1',
+                        '#5A42C1',
+                        '#1F2235',
+                        '#999',
+                        '#777'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+
+    <p></p>
+
+</body>
+</html>

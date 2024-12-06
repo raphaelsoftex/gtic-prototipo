@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Softex - Ajuda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1A1E36;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4B33A1;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+        .help-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .help-item {
+            width: 150px;
+            height: 150px;
+            background-color: #292C4B;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .help-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .help-item img {
+            width: 70px;
+            height: 70px;
+        }
+        .help-item p {
+            margin-top: 10px;
+            color: #f1f1f1;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #4B33A1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+            color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Ajuda - Portal Softex</h1>
+</header>
+
+<div class="container">
+    <h2>Escolha uma categoria de ajuda:</h2>
+    
+    <div class="help-container">
+        <!-- Manuais -->
+        <div class="help-item">
+            <a href="#">
+                <img src="https://img.icons8.com/dusk/64/book.png" alt="Manuais">
+                <p>Manuais</p>
+            </a>
+        </div>
+
+        <!-- Modelos de Documentos -->
+        <div class="help-item">
+            <a href="#">
+                <img src="https://img.icons8.com/dusk/64/document.png" alt="Modelos de Documentos">
+                <p>Documentos</p>
+            </a>
+        </div>
+
+        <!-- Modelos de Ofícios -->
+        <div class="help-item">
+            <a href="#">
+                <img src="https://img.icons8.com/dusk/64/paper.png" alt="Modelos de Ofícios">
+                <p>Ofícios</p>
+            </a>
+        </div>
+
+        <!-- Passo a Passo -->
+        <div class="help-item">
+            <a href="#">
+                <img src="https://img.icons8.com/dusk/64/checklist.png" alt="Passo a Passo">
+                <p>Passo a Passo</p>
+            </a>
+        </div>
+
+        <!-- Vídeos Informativos -->
+        <div class="help-item">
+            <a href="#">
+                <img src="https://img.icons8.com/dusk/64/video.png" alt="Vídeos Informativos">
+                <p>Vídeos</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Softex - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
