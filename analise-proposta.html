@@ -28,6 +28,7 @@
             margin: 0;
             font-size: 28px;
         }
+
         header nav a {
             color: #f1f1f1;
             margin: 0 10px;
@@ -93,19 +94,21 @@
         }
     </style>
     <script>
-        // Escolher aleatoriamente entre "aprovado" e "recusado"
-        const statusAleatorio = Math.random() < 0.5 ? "aprovado" : "recusado";
-    
-        // Obtenha as divs pelo ID
-        const statusAprovado = document.getElementById("status-aprovado");
-        const statusRecusado = document.getElementById("status-recusado");
-    
-        // Exibe apenas a div correspondente ao status aleatório
-        if (statusAleatorio === "aprovado") {
-            statusAprovado.style.display = "block";
-        } else {
-            statusRecusado.style.display = "block";
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            // Escolher aleatoriamente entre "aprovado" e "recusado"
+            const statusAleatorio = Math.random() < 0.5 ? "aprovado" : "recusado";
+
+            // Obtenha as divs pelo ID
+            const statusAprovado = document.getElementById("status-aprovado");
+            const statusRecusado = document.getElementById("status-recusado");
+
+            // Exibe apenas a div correspondente ao status aleatório
+            if (statusAleatorio === "aprovado") {
+                statusAprovado.style.display = "block";
+            } else {
+                statusRecusado.style.display = "block";
+            }
+        });
     </script>
 </head>
 <body>
@@ -113,11 +116,10 @@
 <header>
     <h1>Fase - Análise FACTI e GT-PPI (MCTI)</h1>
     <nav>
-        <P></P>
         <a href="#">Dashboard</a> | 
         <a href="#">Ajuda</a> | 
-        <a href="#">Wiki</a>|
-        <a href="#">FAQ</a>|
+        <a href="#">Wiki</a> | 
+        <a href="#">FAQ</a> | 
         <a href="#">Sair</a>
     </nav>
 </header>
@@ -130,6 +132,7 @@
         <p class="approval"><strong>Status:</strong> Parabéns! Sua proposta foi aprovada.</p>
         <p>Você receberá mais informações sobre os próximos passos em breve.</p>
     </div>
+
     <!-- Caixa de Status - Recusada -->
     <div id="status-recusado" class="status-box rejection" style="display: none;">
         <h2>Situação da Proposta</h2>
@@ -148,8 +151,7 @@
     </div>
 
 </div>
-<p></p>
-<p></p>
+
 <footer class="footer">
     <p>&copy; 2024 Softex - Todos os direitos reservados</p>
 </footer>
