@@ -126,6 +126,12 @@
             width: 100%;
         }
     </style>
+    <script>
+        function salvarSenha() {
+            alert("Senha Alterada com Sucesso");
+            window.location.href = "Perfil.html"; // Redireciona para a página Perfil.html
+        }
+    </script>
 </head>
 <body>
 
@@ -150,8 +156,6 @@
 
             <!-- Ações do perfil -->
             <div class="profile-actions">
-                <a href="perfil_edit_usuario.html">Editar Perfil</a>
-                <a href="#">Visualizar Atividades</a>
                 <a href="Perfil.html">Voltar</a>
             </div>
         </div>
@@ -161,23 +165,28 @@
 
     <!-- Seção derdição de perfil-->
     <div class="activity-section">
-            <ul class="activity-list"><div class="input-group">
-                <label for="email">Senha Atual</label>
-                <p><input type="email" id="email" placeholder=""></p>
+            <ul class="activity-list">
+                <div class="input-group">
+                    <label for="email">Senha Atual</label>
+                    <p><input type="email" id="email" placeholder=""></p>
                 </div>
                 <p></p>
                 <div class="input-group">
-                    <label for="email">Confirmar Senha</label>
-                <p><input type="email" id="email" placeholder=""></p>
+                    <label for="email">Nova Senha</label>
+                    <p><input type="email" id="email" placeholder=""></p>
+                <p></p>
+                <div class="input-group">
+                    <label for="email">Confirmar Nova Senha</label>
+                    <p><input type="email" id="email" placeholder=""></p>
                 </div>
                 <div class="profile-actions">
-                    <a href="#">Alterar Senha</a>
+                    <a href="javascript:void(0)" onclick="salvarSenha()">Alterar Senha</a>
                 </div>
                     </div>
                     <p></p>
                     <p></p>
-            </div>
-        </ul>
+                </div>
+            </ul>
     </div>
 
 </div>
