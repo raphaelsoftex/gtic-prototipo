@@ -92,6 +92,21 @@
             margin-top: 10px;
         }
     </style>
+    <script>
+        // Escolher aleatoriamente entre "aprovado" e "recusado"
+        const statusAleatorio = Math.random() < 0.5 ? "aprovado" : "recusado";
+    
+        // Obtenha as divs pelo ID
+        const statusAprovado = document.getElementById("status-aprovado");
+        const statusRecusado = document.getElementById("status-recusado");
+    
+        // Exibe apenas a div correspondente ao status aleatório
+        if (statusAleatorio === "aprovado") {
+            statusAprovado.style.display = "block";
+        } else {
+            statusRecusado.style.display = "block";
+        }
+    </script>
 </head>
 <body>
 
@@ -127,11 +142,6 @@
         -->
     </div>
 
-    <!-- Caixa de Informações de Envio de Email -->
-    <div class="email-info">
-        <p><strong>Nota:</strong> Um e-mail foi enviado para a instituição informando sobre a aprovação ou não da sua proposta. Verifique sua caixa de entrada.</p>
-    </div>
-
     <!-- Campo para Motivos da Recusa e Próximos Passos -->
     <div class="status-box rejection">
         <h2>Situação da Proposta</h2>
@@ -142,6 +152,10 @@
             <li>Falta de requisitos técnicos.</li>
         </ul>
         <p class="reason">O que acontecerá a seguir: Você pode reavaliar sua proposta e submetê-la novamente no próximo ciclo de análise.</p>
+    </div>
+    <!-- Caixa de Informações de Envio de Email -->
+    <div class="email-info">
+        <p><strong>Nota:</strong> Um e-mail foi enviado para a instituição informando sobre a aprovação ou não da sua proposta. Verifique sua caixa de entrada.</p>
     </div>
 
 </div>
