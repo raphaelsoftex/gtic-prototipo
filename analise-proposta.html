@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise FACTI e GT-PPI (MCTI)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141625;
+            color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #4B33A1;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        header nav a {
+            color: #f1f1f1;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 30px;
+            width: 100%;
+            max-width: 1000px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .status-box {
+            background-color: #1C1E36;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #4B33A1;
+        }
+
+        .status-box h2 {
+            margin: 0 0 15px;
+            font-size: 22px;
+        }
+
+        .status-box p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .email-info {
+            background-color: #FF9800;
+            padding: 15px;
+            border-radius: 8px;
+            color: #141625;
+            font-size: 18px;
+        }
+
+        .footer {
+            background-color: #4B33A1;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .approval {
+            color: #4CAF50; /* Verde para aprovado */
+        }
+
+        .rejection {
+            color: #F44336; /* Vermelho para rejeitado */
+        }
+
+        .reason {
+            font-style: italic;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Fase - Análise FACTI e GT-PPI (MCTI)</h1>
+    <nav>
+        <P></P>
+        <a href="#">Dashboard</a> | 
+        <a href="#">Ajuda</a> | 
+        <a href="#">Wiki</a>|
+        <a href="#">FAQ</a>|
+        <a href="#">Sair</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Caixa de Status de Análise -->
+    <div class="status-box">
+        <h2>Situação da Proposta</h2>
+        <p class="approval"><strong>Status:</strong> Parabéns! Sua proposta foi aprovada.</p>
+        <p>Você receberá mais informações sobre os próximos passos em breve.</p>
+
+        <!-- Se a proposta for rejeitada, use a seção abaixo em vez da aprovação -->
+        <!-- 
+        <p class="rejection"><strong>Status:</strong> Infelizmente, sua proposta foi recusada.</p>
+        <p>Motivos da recusa:</p>
+        <ul>
+            <li>Documentação incompleta.</li>
+            <li>Falta de requisitos técnicos.</li>
+        </ul>
+        <p class="reason">O que acontecerá a seguir: Você pode reavaliar sua proposta e submetê-la novamente no próximo ciclo de análise.</p>
+        -->
+    </div>
+
+    <!-- Caixa de Informações de Envio de Email -->
+    <div class="email-info">
+        <p><strong>Nota:</strong> Um e-mail foi enviado para a instituição informando sobre a aprovação ou não da sua proposta. Verifique sua caixa de entrada.</p>
+    </div>
+
+    <!-- Campo para Motivos da Recusa e Próximos Passos -->
+    <div class="status-box rejection">
+        <h2>Situação da Proposta</h2>
+        <p class="rejection"><strong>Status:</strong> Infelizmente, sua proposta foi recusada.</p>
+        <p>Motivos da recusa:</p>
+        <ul>
+            <li>Documentação incompleta.</li>
+            <li>Falta de requisitos técnicos.</li>
+        </ul>
+        <p class="reason">O que acontecerá a seguir: Você pode reavaliar sua proposta e submetê-la novamente no próximo ciclo de análise.</p>
+    </div>
+
+</div>
+<p></p>
+<p></p>
+<footer class="footer">
+    <p>&copy; 2024 Softex - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
