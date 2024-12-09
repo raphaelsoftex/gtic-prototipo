@@ -126,6 +126,12 @@
             width: 100%;
         }
     </style>
+    <script>
+        function salvarPerfil() {
+            alert("Perfil Salvo");
+            window.location.href = "perfil.html"; // Redireciona para a página perfil.html
+        }
+    </script>
 </head>
 <body>
 
@@ -186,7 +192,8 @@
                          <a>Alterar Telefone</a>
                 </div>
                 <div class="profile-actions">
-                    <a href="#">Salvar Perfil</a>
+                    <a href="javascript:void(0)" onclick="salvarPerfil()">Salvar Perfil</a>
+
                 </div>
             </div>
         </ul>
