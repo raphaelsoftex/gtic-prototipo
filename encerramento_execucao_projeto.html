@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encerramento de Execução do Projeto</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141625;
+            color: #F1F1F1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;    /* Centraliza verticalmente */
+            height: 100vh;          /* Ocupa toda a altura da janela */
+        }
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;  /* Limita a largura */
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #4B33A1;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .section {
+            background-color: #1C1E36;
+            border-radius: 10px;
+            padding: 20px;
+            border: 2px solid #4B33A1;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .section h3 {
+            font-size: 20px;
+            color: #FF9800;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .action-button {
+            background-color: #4B33A1;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 15px;
+            display: inline-block;
+        }
+        .action-button:hover {
+            background-color: #FF9800;
+        }
+        .status-highlight {
+            background-color: #FF9800;
+            color: #141625;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #4B33A1;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Encerramento de Execução do Projeto</h1>
+        </header>
+
+        <!-- Quantidade de dinheiro a ser devolvida -->
+        <div class="section">
+            <h3>Devolução de Recursos</h3>
+            <p>Abaixo está o valor que deve ser devolvido após a execução do projeto:</p>
+            <div class="status-highlight">
+                R$ 15.000,00 <!-- Exemplo de valor, você pode ajustar dinamicamente -->
+            </div>
+        </div>
+
+        <!-- Botão para acessar o Ofício Declaratório -->
+        <div class="section">
+            <h3>Acessar Oficio Declaratório</h3>
+            <p>Clique no botão abaixo para acessar o Oficio Declaratório:</p>
+            <a href="#" class="action-button">Acessar Oficio Declaratório</a>
+        </div>
+
+        <!-- Botão para confirmar o recebimento do Ofício Declaratório -->
+        <div class="section">
+            <h3>Confirmação de Recebimento</h3>
+            <p>Após o recebimento do ofício, confirme clicando no botão abaixo:</p>
+            <a href="#" class="action-button">Confirmar Recebimento do Oficio</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Softex - Todos os direitos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>
